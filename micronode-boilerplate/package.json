@@ -1,0 +1,47 @@
+{
+  "name": "users-service",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start:dev": "NODE_ENV=development yarn babel-watch -L src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./build/index.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "server:build": "yarn run clean && yarn run build-babel && yarn run migrate && yarn run seed",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn run server:build",
+    "knex": "babel-node node_modules/.bin/knex",
+    "seed": "yarn knex seed:run --knexfile src/db/knexfile.js",
+    "migrate": "yarn knex migrate:latest --knexfile src/db/knexfile.js",
+    "rollback": "yarn knex migrate:rollback --knexfile src/db/knexfile.js",
+    "make:seeder": "yarn knex seed:make --knexfile src/db/knexfile.js",
+    "make:migration": "yarn knex migrate:make --knexfile src/db/knexfile.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-watch": "^7.0.0"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.16",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "uuid": "^8.3.2"
+  }
+}
