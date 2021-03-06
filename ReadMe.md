@@ -46,4 +46,19 @@ When using microservices, you isolate software functionality into multiple indep
 ## Getting Started
 
 Start all the containers from docker:
-`docker-compose up` 
+
+```sh
+docker-compose up
+```
+
+List of all running containers in docker:
+
+```sh
+docker ps
+```
+
+go to specific docker container bash : 
+
+```sh
+docker exec -it [container-id] bash
+```

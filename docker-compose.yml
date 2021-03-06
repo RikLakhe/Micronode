@@ -1,5 +1,23 @@
 version: "3"
 services: 
+  micronode-core:
+    build:
+      context: "."
+      dockerfile: "./micronode-core/Dockerfile"
+    ports:
+      - "3001:3001"
+    volumes: 
+      - ./micronode-core:/opt/app
+
+  micronode-company:
+      build:
+        context: "."
+        dockerfile: "./micronode-company/Dockerfile"
+      ports:
+        - "3002:3002"
+      volumes: 
+        - ./micronode-company:/opt/app
+
   micronode-user:
     build:
       context: "."
@@ -8,12 +26,14 @@ services:
       - "3003:3003"
     volumes: 
       - ./micronode-user:/opt/app
-    
-  micronode-core:
+
+  micronode-event:
     build:
       context: "."
-      dockerfile: "./micronode-core/Dockerfile"
+      dockerfile: "./micronode-event/Dockerfile"
     ports:
-      - "7000:7000"
+      - "3004:3004"
     volumes: 
-      - ./micronode-core:/opt/app
+      - ./micronode-event:/opt/app
+
+  
