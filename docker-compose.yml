@@ -1,11 +1,14 @@
 version: "3"
 services: 
   micronode-core:
+    network_mode: host
     build:
       context: "."
       dockerfile: "./micronode-core/Dockerfile"
-    ports:
-      - "3001:3001"
+    depends_on: 
+      - micronode-company
+      - micronode-user
+      - micronode-event
     volumes: 
       - ./micronode-core:/opt/app
 
@@ -14,25 +17,23 @@ services:
         context: "."
         dockerfile: "./micronode-company/Dockerfile"
       ports:
-        - "3002:3002"
+        - "7002:7002"
       volumes: 
         - ./micronode-company:/opt/app
 
   micronode-user:
+    network_mode: host
     build:
       context: "."
       dockerfile: "./micronode-user/Dockerfile"
-    ports:
-      - "3003:3003"
     volumes: 
       - ./micronode-user:/opt/app
 
   micronode-event:
+    network_mode: host
     build:
       context: "."
       dockerfile: "./micronode-event/Dockerfile"
-    ports:
-      - "3004:3004"
     volumes: 
       - ./micronode-event:/opt/app
 

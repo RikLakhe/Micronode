@@ -3,11 +3,11 @@
 Microservices is a service-oriented architecture pattern wherein applications are built as a collection of various smallest independent service units.
 
 <ol>
-<li>Miconode-core</li>
-<li>Miconode-company</li>
-<li>Miconode-user</li>
-<li>Miconode-event</li>
-<li>React APP [TDD]</li>
+<li>Miconode-core [port:7001]</li>
+<li>Miconode-company [port:7002]</li>
+<li>Miconode-user [port:7003]</li>
+<li>Miconode-event [port:7004]</li>
+<li>React APP [TDD] [port:3000]</li>
 </ol>
 
 ## 1. Why ?
