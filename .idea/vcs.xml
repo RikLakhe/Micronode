@@ -6,7 +6,5 @@
     <mapping directory="$PROJECT_DIR$/micronode-core" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/micronode-event" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/micronode-user" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/micronode-user2" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/users-service" vcs="Git" />
   </component>
 </project>
