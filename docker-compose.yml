@@ -13,6 +13,7 @@ services:
       - ./micronode-core:/opt/app
 
   micronode-company:
+      network_mode: host
       build:
         context: "."
         dockerfile: "./micronode-company/Dockerfile"
@@ -26,7 +27,7 @@ services:
     build:
       context: "."
       dockerfile: "./micronode-user/Dockerfile"
-    volumes: 
+    volumes:
       - ./micronode-user:/opt/app
 
   micronode-event:
@@ -34,7 +35,7 @@ services:
     build:
       context: "."
       dockerfile: "./micronode-event/Dockerfile"
-    volumes: 
+    volumes:
       - ./micronode-event:/opt/app
 
   
