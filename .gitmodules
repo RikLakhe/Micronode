@@ -10,3 +10,6 @@
 [submodule "micronode-company"]
 	path = micronode-company
 	url = git@github.com:RikLakhe/micronode-company.git
+[submodule "micronode-FE"]
+	path = micronode-FE
+	url = git@github.com:RikLakhe/micronode-FE.git
