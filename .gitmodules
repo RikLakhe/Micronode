@@ -12,4 +12,4 @@
 	url = git@github.com:RikLakhe/micronode-company.git
 [submodule "micronode-fe"]
 	path = micronode-fe
-	url = ./micronode-fe
+	url = git@github.com:RikLakhe/micronode-fe.git
