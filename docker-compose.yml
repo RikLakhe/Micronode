@@ -1,5 +1,18 @@
 version: "3"
-services: 
+services:
+  micronode-fe:
+    container_name: microFrontend
+    # network_mode: host
+    build:
+      context: "."
+      dockerfile: "./micronode-fe/Dockerfile"
+    ports: 
+      - 80:80
+    depends_on:
+      - micronode-core
+    volumes:
+      - ./micronode-fe:/app
+
   micronode-core:
     network_mode: host
     build:
@@ -37,5 +50,3 @@ services:
       dockerfile: "./micronode-event/Dockerfile"
     volumes:
       - ./micronode-event:/opt/app
-
-  

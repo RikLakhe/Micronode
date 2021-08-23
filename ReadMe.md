@@ -62,3 +62,10 @@ go to specific docker container bash :
 ```sh
 docker exec -it [container-id] bash
 ```
+
+go through the docker container:
+
+```sh
+docker inspect [name-of-container-or-image]
+docker run --rm -it --entrypoint=/bin/bash [name-of-image]
+```
