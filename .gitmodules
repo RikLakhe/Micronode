@@ -10,3 +10,6 @@
 [submodule "micronode-core"]
 	path = micronode-core
 	url = https://github.com/RikLakhe/micronode-core.git
+[submodule "micronode-user"]
+	path = micronode-user
+	url = https://github.com/RikLakhe/micronode-user.git
