@@ -4,3 +4,9 @@
 [submodule "micronode-fe"]
 	path = micronode-fe
 	url = https://github.com/RikLakhe/micronode-fe.git
+[submodule "micronode-event"]
+	path = micronode-event
+	url = https://github.com/RikLakhe/micronode-event.git
+[submodule "micronode-core"]
+	path = micronode-core
+	url = https://github.com/RikLakhe/micronode-core.git
