@@ -1,0 +1,21 @@
+{
+  "name": "micronode",
+  "scripts": {
+    "install": "yarn install:company && yarn install:core && yarn install:user && yarn install:event && yarn install:fe", 
+    "install:company": "cd micronode-company && yarn && cd..",
+    "install:core": "cd micronode-core && yarn && cd..",
+    "install:user": "cd micronode-user && yarn && cd..",
+    "install:event": "cd micronode-event && yarn && cd..",
+    "install:fe": "cd micronode-fe && yarn && cd..",
+    "dev": ""
+  },
+  "version": "0.0.1",
+  "description": "Micro nodes to communicate with each other services",
+  "main": "index.js",
+  "repository": "https://github.com/RikLakhe/Micronode.git",
+  "author": "rikesh <rikeshlakhe@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^7.4.0"
+  }
+}
